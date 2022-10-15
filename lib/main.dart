@@ -12,202 +12,323 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFF161d27),
       appBar: AppBar(
+        backgroundColor: Color(0xFF35465c),
+        elevation: 0.0,
+        leading: Icon(
+          Icons.menu,
+          color: Colors.grey[100],
+        ),
         title: Text(
-          'Register',
+          'Telegram',
           style: TextStyle(
-            color: Color(0xFF0d0010),
-            fontFamily: 'ui-serif',
-            fontSize: 28.0,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 1.0,
+            color: Colors.grey[100],
           ),
         ),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        elevation: 0.0,
+
       ),
 
-      body: Padding(
-        padding: EdgeInsets.fromLTRB(30.0, 0.0, 30.0, 30.0),
-        child: Column(
-          children: <Widget>[
-            Text(
-              'Register to continue',
-              style: TextStyle(
-                color: Colors.grey[400],
-                fontSize: 18.0,
-                fontWeight: FontWeight.normal,
-              ),
-            ),
-            SizedBox(height: 30.0),
-            Row(
-              children: <Widget>[
-                Expanded(
-                  flex: 2,
-                  child: Icon(
-                    Icons.facebook,
-                    color: Colors.blue[800],
-                    size: 50.0,
-                  ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: Icon(
-                    Icons.phone,
-                    color: Colors.blue[800],
-                    size: 50.0,
-                  ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: Icon(
-                    Icons.email,
-                    color: Colors.blue[800],
-                    size: 50.0,
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 15.0),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  'or register with Email',
-                  style: TextStyle(
-                    color: Colors.grey[400],
-                    fontSize: 14.0,
-                    fontWeight: FontWeight.normal,
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 15.0),
-            Row(
-              children: <Widget>[
-                Expanded(child: Text(
-                  'Full Name',
-                  style: TextStyle(
-                    fontSize: 15.0,
-                    fontFamily: 'ui-serif',
-                    color: Colors.grey[800],
-                    fontWeight: FontWeight.bold,
-                  ),
-                )),
-              ],
-            ),
-            Row(
-              children: <Widget>[
-                  Expanded(child: Container(
-                    margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 20.0),
-                    padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
-                    color: Colors.grey[200],
-                    child: Text(
-                      'Malki Abdelhak',
-                      style: TextStyle(
-                        color: Colors.grey[600],
-                        fontSize: 15.0,
-                        fontFamily: 'ui-serif',
-                      ),
-                    ),
-                  )),
-              ],
-            ),
-            Row(
-              children: <Widget>[
-                Expanded(child: Text(
-                  'Email Address',
-                  style: TextStyle(
-                    fontSize: 15.0,
-                    fontFamily: 'ui-serif',
-                    color: Colors.grey[800],
-                    fontWeight: FontWeight.bold,
-                  ),
-                )),
-              ],
-            ),
-            Row(
-              children: <Widget>[
-                Expanded(child: Container(
-                  margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 20.0),
-                  padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
-                  color: Colors.grey[200],
-                  child: Text(
-                    'malkiabd@gmail.com',
-                    style: TextStyle(
-                      color: Colors.grey[600],
-                      fontSize: 15.0,
-                      fontFamily: 'ui-serif',
-                    ),
-                  ),
-                )),
-              ],
-            ),
-            Row(
-              children: <Widget>[
-                Expanded(child: Text(
-                  'Password',
-                  style: TextStyle(
-                    fontSize: 15.0,
-                    fontFamily: 'ui-serif',
-                    color: Colors.grey[800],
-                    fontWeight: FontWeight.bold,
-                  ),
-                )),
-              ],
-            ),
-            Row(
-              children: <Widget>[
-                Expanded(child: Container(
-                  margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 20.0),
-                  padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
-                  color: Colors.grey[200],
-                  child: Text(
-                    '**********',
-                    style: TextStyle(
-                      color: Colors.grey[600],
-                      fontSize: 15.0,
-                      fontFamily: 'ui-serif',
-                    ),
-                  ),
-                )),
-              ],
-            ),
-            Row(
-              children: <Widget>[
-                Expanded(
-                  flex: 50,
-                  child: Container(
-                    margin: EdgeInsets.fromLTRB(0.0, 10.0, 1.0, 15.0),
-                    padding: EdgeInsets.fromLTRB(140.0, 13.0, 10.0, 20.0),
-                    color: Colors.deepPurple,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
 
-                    child: Text(
-                      'Register',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 14.0,
-                        fontFamily: 'ui-serif',
-                        fontWeight: FontWeight.bold,
-                      ),
-                  ),
-                  ),
+          // Messages Recents
+          Container(
+            margin: EdgeInsets.fromLTRB(0.0, 1.5, 0.0, 0.5),
+            padding: EdgeInsets.fromLTRB(7.0, 10.0, 7.0, 13.0),
+            color: Color(0xFF1c2431),
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                    flex: 1,
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage('assets/images.jpeg'),
+                      radius: 30.0,
+                    )
                 ),
+                Expanded(
+                    flex: 4,
+                    child: Container(
+                      padding: EdgeInsets.fromLTRB(4.0, 2.0, 0.0, 11.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                            Text(
+                              'Jane',
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          SizedBox(height: 8.0),
+                          Text(
+                            'Well i do help animals.',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              color: Colors.grey[500],
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ],
+                      ),
+                    )),
+                Expanded(
+                  flex: 1,
+                    child: Container(
+                      padding: EdgeInsets.all(15.0),
+                      child: Text(
+                        '15:34',
+                        style: TextStyle(
+                          fontSize: 14.0,
+                          color: Colors.grey[500],
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                )),
               ],
             ),
-            Text(
-              'Already have an account?',
-              style: TextStyle(
-                color: Colors.grey[800],
-                fontSize: 15.0,
-                fontWeight: FontWeight.bold,
-              ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0.0, 1.5, 0.0, 0.5),
+            padding: EdgeInsets.fromLTRB(7.0, 10.0, 7.0, 13.0),
+            color: Color(0xFF1c2431),
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                    flex: 1,
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage('assets/images1.jpeg'),
+                      radius: 30.0,
+                    )
+                ),
+                Expanded(
+                    flex: 4,
+                    child: Container(
+                      padding: EdgeInsets.fromLTRB(4.0, 2.0, 0.0, 11.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            'Tyrion Lannister',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: 8.0),
+                          Text(
+                            'sometimes passion is...',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              color: Colors.grey[500],
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ],
+                      ),
+                    )),
+                Expanded(
+                    flex: 1,
+                    child: Container(
+                      padding: EdgeInsets.all(15.0),
+                      child: Text(
+                        '00:34',
+                        style: TextStyle(
+                          fontSize: 14.0,
+                          color: Colors.grey[500],
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                    )),
+              ],
             ),
-          ],
+          ),
+          // Messages
+          SizedBox(height: 10.0),
+          Container(
+            margin: EdgeInsets.fromLTRB(0.0, 1.5, 0.0, 0.5),
+            padding: EdgeInsets.fromLTRB(7.0, 10.0, 7.0, 13.0),
+            color: Color(0xFF1c2431),
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                    flex: 1,
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage('assets/images2.jpeg'),
+                      radius: 30.0,
+                    )
+                ),
+                Expanded(
+                    flex: 4,
+                    child: Container(
+                      padding: EdgeInsets.fromLTRB(4.0, 2.0, 0.0, 11.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            'Alena Shy',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: 8.0),
+                          Text(
+                            'Stickes...',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              color: Colors.grey[500],
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ],
+                      ),
+                    )),
+                Expanded(
+                    flex: 1,
+                    child: Container(
+                      padding: EdgeInsets.all(15.0),
+                      child: Text(
+                        '15:34',
+                        style: TextStyle(
+                          fontSize: 14.0,
+                          color: Colors.grey[500],
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                    )),
+              ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0.0, 1.5, 0.0, 0.5),
+            padding: EdgeInsets.fromLTRB(7.0, 10.0, 7.0, 13.0),
+            color: Color(0xFF1c2431),
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                    flex: 1,
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage('assets/images6.jpeg'),
+                      radius: 30.0,
+                    )
+                ),
+                Expanded(
+                    flex: 4,
+                    child: Container(
+                      padding: EdgeInsets.fromLTRB(4.0, 2.0, 0.0, 11.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            'Malki Abdelhak',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: 8.0),
+                          Text(
+                            'my telegram clone',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              color: Colors.grey[500],
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ],
+                      ),
+                    )),
+                Expanded(
+                    flex: 1,
+                    child: Container(
+                      padding: EdgeInsets.all(15.0),
+                      child: Text(
+                        '15:34',
+                        style: TextStyle(
+                          fontSize: 14.0,
+                          color: Colors.grey[500],
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                    )),
+              ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0.0, 1.5, 0.0, 0.5),
+            padding: EdgeInsets.fromLTRB(7.0, 10.0, 7.0, 13.0),
+            color: Color(0xFF1c2431),
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                    flex: 1,
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage('assets/images6.jpeg'),
+                      radius: 30.0,
+                    )
+                ),
+                Expanded(
+                    flex: 4,
+                    child: Container(
+                      padding: EdgeInsets.fromLTRB(4.0, 2.0, 0.0, 11.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            'Malki Abdelhak',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: 8.0),
+                          Text(
+                            'my telegram clone',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              color: Colors.grey[500],
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ],
+                      ),
+                    )),
+                Expanded(
+                    flex: 1,
+                    child: Container(
+                      padding: EdgeInsets.all(15.0),
+                      child: Text(
+                        '15:34',
+                        style: TextStyle(
+                          fontSize: 14.0,
+                          color: Colors.grey[500],
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                    )),
+              ],
+            ),
+          ),
+        ],
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.blue,
+        onPressed: null,
+        elevation: 2.0,
+        child: Icon(
+          Icons.edit,
+          color: Colors.white,
+          size: 25.0,
         ),
-      )
+      ),
     );
   }
 }
